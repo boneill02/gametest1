@@ -2,7 +2,7 @@ import pygame
 
 width = 1024
 height = 640
-display_scale = 2
+display_scale = 1
 display_ratio = (16, 10)
 
 

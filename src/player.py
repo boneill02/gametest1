@@ -1,6 +1,7 @@
 import pygame
 import gametest1
 import game_map
+import display
 
 
 class Player:
@@ -11,7 +12,7 @@ class Player:
         self.y = 0
         self.w = w
         self.h = h
-        self.movement_length = 5
+        self.movement_length = 3 * display.display_scale
         self.anim_speed = 15
         self.moving = False
         self.moving_ticks = 0
@@ -33,10 +34,10 @@ class Player:
     def keys_check(self, keys, game):
         self.moving = False
         if keys[pygame.K_LSHIFT]:
-            self.movement_length = 10
+            self.movement_length = 6 * display.display_scale
             self.anim_speed = 5
         else:
-            self.movement_length = 5
+            self.movement_length = 3 * display.display_scale
             self.anim_speed = 10
         if keys[pygame.K_w]:
             self.moving = True
